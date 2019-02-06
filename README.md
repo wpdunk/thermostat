@@ -10,7 +10,18 @@ Thermostat starts at 20 degrees
 
 
 You can increase the temp with an up function
+
+* As a thermostat user
+* I want to be able to increase the temperature
+* So that I can be warm
+
+
 You can decrease the temp with a down function
+
+* As a thermostat user
+* I want to be able to decrease the temperature
+* So that I can be cool
+
 The minimum temperature is 10 degrees
 If power saving mode is on, the maximum temperature is 25 degrees
 If power saving mode is off, the maximum temperature is 32 degrees
