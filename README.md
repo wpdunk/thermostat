@@ -22,7 +22,13 @@ You can decrease the temp with a down function
 * I want to be able to decrease the temperature
 * So that I can be cool
 
+
 The minimum temperature is 10 degrees
+
+* As a thermostat user
+* I want to be able to set the min temp
+* So that it is never too cold
+
 If power saving mode is on, the maximum temperature is 25 degrees
 If power saving mode is off, the maximum temperature is 32 degrees
 Power saving mode is on by default
