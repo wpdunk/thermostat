@@ -33,19 +33,42 @@ describe("Thermostat", function() {
     expect(thermostat.isPowerSavingModeOn()).toBe(true);
   });
 
-  // describe("Thermostat", function() {
-  //   beforeEach(function() {
-  //     thermostat.powerSave();
-  //   });
-  //
-  //   it("does not increase temp above 25", function() {
-  //     for (var i = 1; i <= 6; i++) {
-  //     thermostat.up();
-  //     }
-  //     expect(thermostat.getCurrentTemperature()).toEqual(25);
-  //   });
-  //
-  // });
+  it('can switch PSM off', function() {
+    thermostat.switchPowerSavingModeOff();
+    expect(thermostat.isPowerSavingModeOn()).toBe(false);
+  });
+
+  it('can switch PSM back on', function() {
+    thermostat.switchPowerSavingModeOff();
+    expect(thermostat.isPowerSavingModeOn()).toBe(false);
+    thermostat.switchPowerSavingModeOn();
+    expect(thermostat.isPowerSavingModeOn()).toBe(true);
+  });
+
+  describe("when PSM is on", function() {
+
+    it("does not increase temp above 25", function() {
+      for (var i = 1; i <= 6; i++) {
+      thermostat.up();
+      }
+      expect(thermostat.getCurrentTemperature()).toEqual(25);
+    });
+  });
+
+  describe('when power saving mode is off', function() {
+    beforeEach(function() {
+      thermostat.switchPowerSavingModeOff();
+    });
+    it('does not increase temp above 32', function() {
+      for (var i = 1; i < 13; i++) {
+        thermostat.up();
+      }
+      expect(thermostat.getCurrentTemperature()).toEqual(32);
+    });
+  });
+
+
+
 
 
 
