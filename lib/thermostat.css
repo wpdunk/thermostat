@@ -1,3 +1,39 @@
+body {
+  background-image: url('./images/london.jpg');
+  background-color: #cccccc;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.london {
+  background-image: url('./images/london.jpg');
+}
+
+.newyork {
+  background-image: url('./images/new%20york.jpg');
+}
+
+.paris {
+  background-image: url('./images/paris.jpg');
+}
+
+.tokyo {
+  background-image: url('./images/tokyo.jpg');
+}
+
+.bishkek {
+  background-image: url('./images/bishkek.jpg');
+}
+
+.thermostat-container {
+  background-color: white;
+  padding: 4%;
+  width: 44%;
+  margin-top: 10%;
+}
+
 .low-usage {
   color: green;
 }

@@ -2,20 +2,56 @@
 <html>
   <head>
     <title>Thermostat</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
     <link rel="stylesheet" type="text/css" href="lib/thermostat.css">
   </head>
-  <body>
-    <section>
-      <h1 id="temperature"></h1>
-      <p>
-        <button id="temp-up">+</button>
-        <button id="temp-down">-</button>
-        <button id="temp-reset">reset</button>
-        power saving mode is <span id="power-saving-status">on</span>
-        <button id="psm-on">PSM on</button>
-        <button id="psm-off">PSM off</button>
-      </p>
-    </section>
+  <body id="body">
+    <div class="thermostat-container">
+      <div class="container">
+
+        <div class="row">
+          <div class="column">
+            <section>
+              <select id="current-city">
+                <option value="london">London</option>
+                <option value="new%20york">New York</option>
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="bishkek">Bishkek</option>
+              </select>
+            </section>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column"><h2>Outside:</h2></div>
+          <div class="column"><h2><span id="current-temperature">20</span></h2></div>
+        </div>
+
+        <div class="row">
+          <div class="column"><h2>Inside:</h2></div>
+          <div class="column"><h2 id="temperature"></h2></div>
+        </div>
+
+        <div class="row">
+          <div class="column"><button id="temp-up" class="button">+</button></div>
+          <div class="column"><button id="temp-down" class="button button-outline">-</button></div>
+          <div class="column"><button id="temp-reset" class="button button-clear">reset</button></div>
+        </div>
+
+        <div class="row">
+          <div class="column"><h3>Power Saving Mode is <span id="power-saving-status">ON</span></h3></div>
+        </div>
+
+        <div class="row">
+          <div class="column"><button id="psm-on" class="button">PSM on</button></div>
+          <div class="column"><button id="psm-off" class="button button-outline">PSM off</button></div>
+        </div>
+
+      </div>
+    </div>
 
     <script src="src/thermostat.js"></script>
 
